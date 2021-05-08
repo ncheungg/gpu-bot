@@ -48,15 +48,26 @@ class ScannerBot:
         safePrint("GPU IN STOCK: " + link)
         self.toaster.show_toast("GPU IN STOCK", link, threaded=True, duration=10, callback_on_click=openUrl)
 
-    def scanCanadaComputers(self, link):
-        # proxy = random.choice(self.proxies)
-        # proxies = {
-        #     "https": "https://" + proxy
-        # }
+    def getRandomProxy(self):
+        if len(self.proxies) == 0:
+            return {}
 
-        res = requests.get(link, headers=self.headers)
+        proxy = random.choice(self.proxies)
+        proxies = {
+            "http": "http://" + proxy,
+            "https": "https://" + proxy
+        }
+
+        return proxies
+
+    def parseHTML(self, link):
+        res = requests.get(link, headers=self.headers, proxies=self.getRandomProxy())
         soup = BeautifulSoup(res.text, "html.parser")
 
+        return soup
+
+    def scanCanadaComputers(self, link):
+        soup = self.parseHTML(link)
         arr = soup.find("div", class_="pi-prod-availability").find_all("span")
         arr = [x.get_text().strip() for x in arr]
 
@@ -66,9 +77,7 @@ class ScannerBot:
             safePrint("Unavailable: " + link)
 
     def scanMemoryExpress(self, link):
-        res = requests.get(link, headers=self.headers)
-        soup = BeautifulSoup(res.text, "html.parser")
-
+        soup = self.parseHTML(link)
         val = soup.find("div", class_="c-capr-inventory__availability").find("span").get_text().strip()
 
         if val != "Out of Stock":
@@ -77,9 +86,7 @@ class ScannerBot:
             safePrint("Unavailable: " + link)
 
     def scanBestBuy(self, link):
-        res = requests.get(link, headers=self.headers)
-        soup = BeautifulSoup(res.text, "html.parser")
-
+        soup = self.parseHTML(link)
         arr = soup.find_all("span", class_="availabilityMessage_ig-s5")
         arr = [x.get_text().strip() for x in arr]
 
@@ -91,9 +98,7 @@ class ScannerBot:
             safePrint("Unavailable: " + link)
 
     def scanNewegg(self, link):
-        res = requests.get(link, headers=self.headers)
-        soup = BeautifulSoup(res.text, "html.parser")
-
+        soup = self.parseHTML(link)
         val = soup.find("div", class_="product-inventory").find("strong").get_text().strip()
 
         if val != "OUT OF STOCK.":
@@ -148,8 +153,11 @@ class ScannerBot:
             self.queue.put(None)
 
 
+# entry point of the script
 if __name__ == "__main__":
     bot = ScannerBot(LINKS, PROXIES, numOfThreads=10)
+
+    # PICK WHETHER YOU WANT A LOOP OR JUST ONE SCAN
 
     bot.scanLoop()
     # bot.scanOnce()
