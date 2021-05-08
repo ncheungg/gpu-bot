@@ -13,6 +13,8 @@ This gpu bot will scan all links provided in the **links.txt** file. The bot wil
 
 ## Installation & Setup
 
+You must install a custom version of [win10toast](https://github.com/jithurjacob/Windows-10-Toast-Notifications/pull/38) for this script to work. More info [here](https://github.com/jithurjacob/Windows-10-Toast-Notifications/pull/38#issuecomment-770334636)
+
 `pip install -r requirements.txt`
 
 `python ./main.py`
