@@ -1,0 +1,2054 @@
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614A30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00116163 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614A30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00116163 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614A30>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614880>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00116164 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614880>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00116164 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614880>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B06146D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=187683 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B06146D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=187683 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B06146D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0622550>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00116013 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0622550>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00116013 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0622550>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614BE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.newegg.ca', port=443): Max retries exceeded with url: /msi-geforce-rtx-3080-rtx-3080-ventus-3x-10g-oc/p/N82E16814137598?Description=3080&cm_re=3080-_-14-137-598-_-Product (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614BE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 110, in threadWorker
+    self.scanNewegg(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 87, in scanNewegg
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.newegg.ca', port=443): Max retries exceeded with url: /msi-geforce-rtx-3080-rtx-3080-ventus-3x-10g-oc/p/N82E16814137598?Description=3080&cm_re=3080-_-14-137-598-_-Product (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614BE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B06226A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00114689 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B06226A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00114689 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B06226A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B062E2E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00114927 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B062E2E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00114927 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B062E2E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614DF0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=185405 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614DF0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=185405 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614DF0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614250>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=190839 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614250>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=190839 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614250>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+aceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614520>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00114397 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614520>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00114397 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614520>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+
+
+
+
+
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0622340>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00113958 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0622340>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00113958 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0622340>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B02602B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=185407 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B02602B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=185407 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B02602B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0622400>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=189410 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0622400>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=189410 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0622400>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215ACED43A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=186310 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACED43A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=186310 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACED43A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B06226D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=183100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B06226D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=183100 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B06226D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215ACEE20A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.bestbuy.ca', port=443): Max retries exceeded with url: /en-ca/product/evga-nvidia-geforce-rtx-3060-xc-12gb-dddr6-video-card/15318940 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACEE20A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 112, in threadWorker
+    self.scanBestBuy(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 73, in scanBestBuy
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.bestbuy.ca', port=443): Max retries exceeded with url: /en-ca/product/evga-nvidia-geforce-rtx-3060-xc-12gb-dddr6-video-card/15318940 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACEE20A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614400>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=189411 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614400>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=189411 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614400>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+aceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614790>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=186309 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614790>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=186309 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614790>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B062E6A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=184167 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B062E6A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=184167 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B062E6A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B062E8B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=184760 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B062E8B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=184760 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B062E8B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0622040>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=185408 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0622040>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=185408 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0622040>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215ACED9880>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=184759 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACED9880>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=184759 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACED9880>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614430>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=183209 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614430>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=183209 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614430>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215ACED42B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=185084 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACED42B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=185084 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACED42B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0260D60>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00113959 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0260D60>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00113959 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0260D60>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215ACED9CA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00114003 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACED9CA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00114003 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215ACED9CA0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0260F70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00113953 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0260F70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00113953 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0260F70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0614BB0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00113955 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614BB0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 108, in threadWorker
+    self.scanMemoryExpress(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 62, in scanMemoryExpress
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.memoryexpress.com', port=443): Max retries exceeded with url: /Products/MX00113955 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0614BB0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "D:\Python\Python39\lib\socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "D:\Python\Python39\lib\site-packages\urllib3\connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x00000215B0260D00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=184743 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0260D00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 50, in scanCanadaComputers
+    res = requests.get(link, headers=self.headers)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Python\Python39\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.canadacomputers.com', port=443): Max retries exceeded with url: /product_info.php?cPath=43_557_559&item_id=184743 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000215B0260D00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
+Traceback (most recent call last):
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 106, in threadWorker
+    self.scanCanadaComputers(link)
+  File "D:\Nathan\Documents\Python Projects\gpu-bot\main.py", line 53, in scanCanadaComputers
+    arr = soup.find("div", class_="pi-prod-availability").find_all("span")
+AttributeError: 'NoneType' object has no attribute 'find_all'
+
